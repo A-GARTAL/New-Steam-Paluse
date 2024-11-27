@@ -1,0 +1,330 @@
+@font-face {
+  font-family: "Vazirmatn";
+  src: url(../font/Vazirmatn/static/Vazirmatn-Regular.ttf);
+}
+
+:root {
+  --primary_color: #1565C0;
+  --secondary_color: #0D47A1;
+  --dark_color:#212121;
+  --light_color:#FAFAFA;
+  --main_radius: 3vw;
+  --sub_radius: 1.5vw;
+  --half_sub_radius: 0.75vw;
+}
+
+body {
+  background-color: var(--primary_color);
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  padding: 10px;
+  gap: 2%;
+}
+
+* {
+  color: var(--light_color);
+  box-sizing: border-box;
+  font-family: "Vazirmatn";
+  transition: 0.3s;
+  padding: 0;
+  margin: 0;
+  letter-spacing: 1px;
+  list-style: none;
+}
+
+.flex_box {
+  display: flex;
+}
+
+.flex_row {
+  flex-direction: row;
+}
+
+.flex_column {
+  flex-direction: column;
+}
+
+.flex_justify_center {
+  justify-content: center;
+}
+
+.flex_align_center {
+  align-items: center;
+}
+
+.font_bold {
+  font-weight: bold;
+}
+
+.main_radius {
+  border-radius: var(--main_radius);
+}
+
+.sub_radius {
+  border-radius: var(--sub_radius);
+}
+
+
+#header_name {
+  background-color: var(--secondary_color);
+  padding: 5px;
+  font-size: 2rem;
+  height: 10%;
+}
+
+#event_banner {
+  background-color: var(--secondary_color);
+  height: 25%;
+}
+
+#main_container {
+  height: 65%;
+  gap: 3%;
+}
+
+#page_content_container {
+  background-color: var(--secondary_color);
+  border-radius: var(--sub_radius);
+  width: 80%;
+  padding: 10px;
+}
+
+#profile_container {
+  height: 100%;
+  font-size: 10vh;
+}
+
+#search_container {
+  height: 100%;
+
+}
+.search_container_top {
+  height: 90%;
+  border-bottom: 1px solid var(--light_color);
+  padding: 0 10px;
+}
+
+.search_input_container {
+  height: 15%;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--light_color);
+}
+
+.search_input_container input{
+  height: 90%;
+  width: 50%;
+  color: var(--dark_color);
+  border: none;
+  outline: none;
+  border-radius: var(--sub_radius);
+  padding: 2px 10px;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.search_input_container img{
+  height: 100%;
+  margin-left: 1.5%;
+  cursor: pointer;
+}
+.search_input_container input:focus{
+  scale: 1.05;
+}
+.search_input_container img:hover{
+  scale: 1.15;
+}
+
+.game_info {
+  height: 85%;
+  padding: 5px;
+}
+
+.game_img {
+  height: 100%;
+  width: 23%;
+}
+
+.game_img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: var(--sub_radius);
+}
+
+.game_info_part_1 ,
+.game_info_part_2 {
+  width: 47%;
+  height: 100%;
+  padding: 0 10px;
+  justify-content: space-around;
+  border-right: 1px solid var(--light_color);
+  text-overflow: ellipsis;
+}
+
+.game_info_name {
+  width: 100%;
+  justify-content: space-between;
+  margin-left: -5px;
+
+}
+
+.game_info_part_2 {
+  width: 30%;
+  border: none;
+  padding: 0 5px 0 10px;
+}
+
+.game_info_part_2 option {
+  color: var(--dark_color);
+}
+
+#editions ,
+#region {
+  color: var(--dark_color);
+  width: 100%;
+  height: 60%;
+  border: none;
+  outline: none;
+  border-radius: var(--half_sub_radius);
+  padding: 2px 5px;
+}
+
+.search_container_bottom {
+  height: 10%;
+  justify-content: space-around;
+}
+
+#calculator_container {
+  height: 100%;
+  gap: 10%;
+}
+
+.calculator_container_top {
+  height: 50%;
+  border: 1px solid var(--light_color);
+  border-radius: var(--sub_radius);
+  gap: 1%;
+  padding: 10px;
+}
+
+.calculator_container_top select ,
+.calculator_container_top input ,
+.calculator_container_top option {
+  color: var(--dark_color);
+  background-color: var(--light_color);
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 1.5rem;
+  border-radius: var(--half_sub_radius);
+  padding: 3px 5px;
+  cursor: pointer;
+}
+
+.calculator_left_side ,
+.calculator_right_side {
+  height: 90%;
+  width: 45%;
+  gap: 3%;
+}
+
+.calculator_middle_side {
+  font-size: 300%;
+}
+
+.calculator_container_bottom {
+  height: 40%;
+}
+
+.calculator_container_bottom img{
+  height: 100%;
+  width: 100%;
+  border-radius: var(--sub_radius);
+}
+
+#market_container {
+  height: 100%;
+  padding: 0px 10px;
+}
+
+.market_container_top {
+  height: 90%;
+}
+
+.key_info,
+.ticket_info {
+  width: 49%;
+  gap: 4%;
+}
+
+.key_info img ,
+.ticket_info img,
+.market_items_price
+{
+  background-color: var(--primary_color);
+  height: 70%;
+  width: 50%;
+  border-radius: var(--sub_radius);
+  padding: 0 10px;
+}
+
+.market_items_price {
+  height: 30%;
+}
+
+.market_items_price p{
+  padding: 5px 10px;
+}
+
+.item_price {
+  border-bottom: 2px solid var(--light_color);
+}
+
+.market_container_bottom {
+  height: 10%;
+  justify-content: end;
+}
+/*!-------------------------------------------------------------  */
+#options_list_container {
+  background-color: var(--secondary_color);
+  border-radius: var(--sub_radius);
+  width: 20%;
+}
+
+#options_list {
+  height: 100%;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.option_list_opt label{
+  padding: 5px;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.option_list_opt label:hover{
+  scale: 1.2;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.option_list_opt input{
+  display: none;
+}
+
+
+
+/*!-------------------------------------------------------  */
+/*!-------------------Disable Pages-----------------------  */
+#profile_container ,
+#search_container ,
+#calculator_container,
+#market_container,
+/* #Setting_container, */
+#report_container,
+#about_container{
+  display: none;
+}
