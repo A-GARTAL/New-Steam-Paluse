@@ -17,11 +17,11 @@
     <section id="main_container" class="flex_box flex_row main_radius">
       <section id="page_content_container">
         <section id="profile_container"
-          class="flex_box flex_justify_center flex_align_center font_bold"
+          class="content_page flex_box flex_justify_center flex_align_center font_bold"
         >
           Coming soon ...
         </section>
-        <section id="search_container">
+        <section id="search_container" class="content_page flex_box flex_column">
           <div class="search_container_top">
             <setion
               class="search_input_container flex_box flex_row flex_justify_center"
@@ -101,7 +101,7 @@
             <div>PCGW</div>
           </div>
         </section>
-        <section id="calculator_container" class="flex_box flex_column">
+        <section id="calculator_container" class="content_page flex_box flex_column">
           <div class="calculator_container_top flex_box flex_row flex_justify_center flex_align_center">
             <div class="calculator_left_side flex_box flex_column flex_justify_center flex_align_center">
               <select name="" id="">
@@ -128,7 +128,7 @@
             <img src="image/packshot-b8bdb709aaa158092e13e0d63aa459a1.webp" alt="">
           </div>
         </section>
-        <section id="market_container">
+        <section id="market_container" class="content_page flex_box flex_column">
           <div class="market_container_top flex_box flex_row">
             <div class="key_info flex_box flex_column flex_align_center">
               <img src="image/key.png" alt="">
@@ -149,69 +149,127 @@
             Last Update : 09:43:10 PM
           </div>
         </section>
-        <section id="Setting_container"class="flex_box flex_justify_center flex_align_center font_bold">
-          Coming soon ...
+        <section id="Setting_container"class="content_page full_height flex_box flex_row">
+          <div class="login_part flex_box flex_column">
+            <div>Steam Login</div>
+          <div>
+            <input type="text" name="" id="login_input" value="disabled" disabled>
+            <button id="login_btn">Login</button>
+          </div>
+          <div>The Steam login in optional and your information will not stored anywhere. <br>
+            By logining in , you can viwe your profile status and owend games.
+          </div>
+          </div>
+          <div class="region_part flex_box flex_row flex_align_center">
+            <label for="acc_region"">Region</label>
+            <select name="" id="acc_region" class="font_bold">
+              <option value="" selected>Argentina</option>
+              <option value="">Us</option>
+              <option value="">Ukraine</option>
+            </select>
+          </div>
+          <div class="theme_part flex_box flex_row flex_align_center">
+            <label for="theme">Theme</label>
+            <select name="" id="theme"  class="font_bold">
+              <option value="">White</option>
+              <option value="">Blue</option>
+            </select>
+          </div>
+          <div class="irt_calc_part flex_box flex_row flex_align_center">
+            <label for="irt_calc">Calculate IRT Price</label>
+            <select name="" id="irt_calc"  class="font_bold">
+              <option value="" selected>Off</option>
+              <option value="">On</option>
+            </select>
+          </div>
+          <div class="ownend_check_part flex_box flex_row flex_align_center">
+            <label for="ownend_check">Check for Owned Games</label>
+            <select name="" id="ownend_check"  class="font_bold">
+              <option value="" selected>Off</option>
+              <option value="">On</option>
+            </select>
+          </div>
         </section>
-        <section id="report_container"class="flex_box flex_justify_center flex_align_center font_bold">
-          Coming soon ...
+        <section id="report_container"class="content_page full_height flex_box flex_column">
+          <div class="sender_info flex_box flex_column">
+            <div>
+              <label for="">Name :</label><br>
+              <input type="text" name="" id="report_sender_name">
+            </div>
+            <div>
+              <label for="">Social Media :</label><br>
+              <select name="" id="user_social_media">
+                <option value="">Telegram</option>
+                <option value="">Instagram</option>
+                <option value="">Steam</option>
+                <option value="">Mail</option>
+              </select>
+              <input type="text" name="" id="user_social_media_id">
+            </div>
+          </div>
+          <div class="bug_info flex_box flex_row">
+              <label for="">Bug Information</label><br>
+              <textarea name="" id="report_descreption"></textarea>
+              <button class="report_submit_btn">Submit</button>
+          </div>
         </section>
-        <section id="about_container" class="flex_box flex_justify_center flex_align_center font_bold">
-          Coming soon ...
+        <section id="about_container" class="content_page flex_box flex_justify_center flex_align_center font_bold">
+          This Vresion of Steam pulse is test version and may have some bugs and don't work well.
         </section>
       </section>
       <section id="options_list_container">
         <ul id="options_list" class="flex_box flex_column">
-          <li class="option_list_opt">
+          <li data-type="profile_container" class="option_list_opt">
             <label
-              class="flex_box flex_justify_center flex_align_center"
+              class="side_option_label flex_box flex_justify_center flex_align_center"
               for="profile_btn"
               >Profile</label
             >
             <input type="radio" name="option_list" id="profile_btn" />
           </li>
-          <li class="option_list_opt">
+          <li data-type="search_container" class="option_list_opt">
             <label
-              class="flex_box flex_justify_center flex_align_center"
+              class="side_option_label flex_box flex_justify_center flex_align_center"
               for="search_btn"
               >Search</label
             >
             <input type="radio" name="option_list" id="search_btn" />
           </li>
-          <li class="option_list_opt">
+          <li data-type="calculator_container" class="option_list_opt">
             <label
-              class="flex_box flex_justify_center flex_align_center"
+              class="side_option_label flex_box flex_justify_center flex_align_center"
               for="calculator_btn"
               >Calculator</label
             >
             <input type="radio" name="option_list" id="calculator_btn" />
           </li>
-          <li class="option_list_opt">
+          <li data-type="market_container" class="option_list_opt">
             <label
-              class="flex_box flex_justify_center flex_align_center"
+              class="side_option_label flex_box flex_justify_center flex_align_center"
               for="market_btn"
               >Market</label
             >
             <input type="radio" name="option_list" id="market_btn" />
           </li>
-          <li class="option_list_opt">
+          <li data-type="Setting_container" class="option_list_opt">
             <label
-              class="flex_box flex_justify_center flex_align_center"
+              class="side_option_label flex_box flex_justify_center flex_align_center"
               for="setting_btn"
               >Setting</label
             >
             <input type="radio" name="option_list" id="setting_btn" />
           </li>
-          <li class="option_list_opt">
+          <li data-type="report_container" class="option_list_opt">
             <label
-              class="flex_box flex_justify_center flex_align_center"
+              class="side_option_label flex_box flex_justify_center flex_align_center"
               for="report_btn"
               >Bug Report</label
             >
             <input type="radio" name="option_list" id="report_btn" />
           </li>
-          <li class="option_list_opt">
+          <li data-type="about_container" class="option_list_opt">
             <label
-              class="flex_box flex_justify_center flex_align_center"
+              class="side_option_label flex_box flex_justify_center flex_align_center"
               for="about_btn"
               >About</label
             >

@@ -8,6 +8,7 @@
   --secondary_color: #0D47A1;
   --dark_color:#212121;
   --light_color:#FAFAFA;
+  --light_green: #03bb62;
   --main_radius: 3vw;
   --sub_radius: 1.5vw;
   --half_sub_radius: 0.75vw;
@@ -31,6 +32,10 @@ body {
   margin: 0;
   letter-spacing: 1px;
   list-style: none;
+}
+
+.full_height {
+  height: 100%;
 }
 
 .flex_box {
@@ -128,10 +133,12 @@ body {
   margin-left: 1.5%;
   cursor: pointer;
 }
-.search_input_container input:focus{
+.search_input_container input:focus ,
+#login_input:focus {
   scale: 1.05;
 }
-.search_input_container img:hover{
+.search_input_container img:hover ,
+#login_btn:hover {
   scale: 1.15;
 }
 
@@ -286,6 +293,156 @@ body {
   height: 10%;
   justify-content: end;
 }
+
+#Setting_container {
+  gap: 4%;
+  flex-wrap: wrap;
+}
+
+.login_part {
+  background-color: var(--primary_color);
+  height: 50%;
+  width: 100%;
+  justify-content: space-around;
+  padding: 10px;
+  border-radius: var(--half_sub_radius);
+}
+
+#login_input {
+  color: var(--dark_color);
+  padding: 5px 10px;
+  font-size: 1.3rem;
+  width: 40%;
+  border: none;
+  outline: none;
+  border-radius: var(--half_sub_radius);
+  cursor: pointer;
+}
+
+#login_btn {
+  color: var(--light_color);
+  background-color: var(--light_green);
+  padding:10px;
+  border: none;
+  border-radius: var(--half_sub_radius);
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.region_part ,
+.theme_part ,
+.irt_calc_part ,
+.ownend_check_part {
+  width: 48%;
+  height: 20%;
+  background-color: var(--primary_color);
+  border-radius: var(--half_sub_radius);
+  padding: 10px;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+#acc_region ,
+#acc_region option ,
+#theme,
+#theme option,
+#irt_calc,
+#irt_calc option,
+#ownend_check,
+#ownend_check option {
+  color: var(--dark_color);
+  background-color: var(--light_color);
+  width: 50%;
+  border: none;
+  outline: none;
+  border-radius: var(--half_sub_radius);
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+#report_container {
+  justify-content: space-between;
+}
+
+.sender_info ,
+.bug_info{
+  height: 49%;
+  width: 100%;
+  border: 1px solid var(--light_color);
+  padding: 5px 10px;
+  border-radius: var(--half_sub_radius);
+  justify-content: space-around;
+}
+
+.sender_info div {
+  height: 50%;
+}
+
+.sender_info input ,
+.sender_info select {
+  color: var(--dark_color);
+  height: 50%;
+  width: 99.5%;
+  border: none;
+  outline: none;
+  border-radius: var(--half_sub_radius);
+  padding: 5px 10px;
+  font-size: 1.1rem;
+  cursor: pointer;
+
+}
+
+#user_social_media {
+  width: 19%;
+}
+
+#user_social_media option {
+  color: var(--dark_color);
+}
+
+#user_social_media_id {
+  width: 80%;
+}
+
+.bug_info {
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.bug_info label {
+  width: 100%;
+}
+
+#report_descreption {
+  color: var(--dark_color);
+  height: 80%;
+  width: 80%;
+  padding: 5px 10px;
+  font-size: 1.1rem;
+  outline: none;
+  border: none;
+  border-radius: var(--half_sub_radius);
+  cursor: pointer;
+  resize: none;
+}
+
+.report_submit_btn {
+  color: var(--light_color);
+  background-color: var(--light_green);
+  height: 30%;
+  width: 15%;
+  padding: 10px;
+  font-size: 1.1rem;
+  outline: none;
+  border: 2px solid var(--light_color);
+  border-radius: var(--half_sub_radius);
+  cursor: pointer;
+}
+
+.report_submit_btn:hover {
+  scale: 1.1;
+}
+
 /*!-------------------------------------------------------------  */
 #options_list_container {
   background-color: var(--secondary_color);
@@ -319,12 +476,13 @@ body {
 
 /*!-------------------------------------------------------  */
 /*!-------------------Disable Pages-----------------------  */
+#about_container ,
 #profile_container ,
 #search_container ,
 #calculator_container,
 #market_container,
-/* #Setting_container, */
-#report_container,
-#about_container{
+#Setting_container,
+#report_container 
+{
   display: none;
 }
