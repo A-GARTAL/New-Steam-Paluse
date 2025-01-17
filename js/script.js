@@ -9,7 +9,8 @@ let gameReleaseDate = document.getElementById('game_release_date')
 let gamePlayerCount = document.getElementById('game_player_count')
 let gameDeveloper = document.getElementById('game_developer')
 let gamePublisher = document.getElementById('game_publisher')
-console.log(gameName)
+let gamePrice = document.getElementById('game_price')
+// console.log(gameName)
 gameSearchBar.addEventListener('keyup',keyValidator)
 gameSearchIcon.addEventListener('click',getGameAppId)
 const url ="https://store.steampowered.com/api/appdetails?appids="
@@ -79,6 +80,8 @@ async function fetchData() {
         // ذخیره داده‌ها در یک متغی
         // console.log(data[gameAppId].data.price_overview.final);
         gameBanner.setAttribute('src',data[gameAppId].data.header_image);
+        // APIKEY = "C0C2746E5859F6EAD7B27E79C6D9BC76"
+        // gameBanner.setAttribute('src',"https://api.steampowered.com/IPlayerService/GetAvatarFrame/v1/?key=" + APIKEY + "&steamid=" + gameAppId);
         gameName.innerHTML = data[gameAppId].data.name;
         gameDlcCount.innerHTML = data[gameAppId].data.dlc.length;
         gameReleaseDate.innerHTML = data[gameAppId].data.release_date.date;
@@ -86,9 +89,10 @@ async function fetchData() {
         gamePlayerCount.innerHTML = "Error!!!"
         gameDeveloper.innerHTML = data[gameAppId].data.developers;
         gamePublisher.innerHTML = data[gameAppId].data.publishers;
+        gamePrice.innerHTML = data[gameAppId].data.price_overview.final_formatted;
 
     } catch (error) {
-        console.error('There has been a problem with your fetch operation:', error);
+        alert('There has been a problem with your fetch operation:', error);
     }
 }
 }
